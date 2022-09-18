@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WB.###",
+ "creation": "2022-05-11 14:45:22.343654",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wallbox_settings_section",
+  "endpoint_url",
+  "column_break_3",
+  "password",
+  "evse_control_section",
+  "vehicle_state",
+  "max_current",
+  "actual_power",
+  "last_action_user",
+  "energy",
+  "always_active",
+  "column_break_11",
+  "evse_state",
+  "actual_current_in_a",
+  "duration",
+  "last_action_uid",
+  "mileage",
+  "meter_reading",
+  "data_13"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_state",
+   "fieldtype": "Select",
+   "label": "Vehicle State",
+   "options": "ready\nVehicle detected\nVehicle charging\nError"
+  },
+  {
+   "fieldname": "evse_state",
+   "fieldtype": "Select",
+   "label": "EVSE State",
+   "options": "Charging station unlocked\nCharging station locked"
+  },
+  {
+   "fieldname": "max_current",
+   "fieldtype": "Int",
+   "label": "max Current"
+  },
+  {
+   "fieldname": "actual_current_in_a",
+   "fieldtype": "Int",
+   "label": "actual Current in A"
+  },
+  {
+   "fieldname": "actual_power",
+   "fieldtype": "Data",
+   "label": "actual Power"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "always_active",
+   "fieldtype": "Select",
+   "label": "always Active",
+   "options": "True\nFalse"
+  },
+  {
+   "fieldname": "last_action_user",
+   "fieldtype": "Data",
+   "label": "last Action User"
+  },
+  {
+   "fieldname": "last_action_uid",
+   "fieldtype": "Data",
+   "label": "last Action UID "
+  },
+  {
+   "fieldname": "energy",
+   "fieldtype": "Float",
+   "label": "Energy "
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Data",
+   "label": " Charged Mileage in km"
+  },
+  {
+   "fieldname": "meter_reading",
+   "fieldtype": "Data",
+   "label": "meter Reading "
+  },
+  {
+   "fieldname": "data_13",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "endpoint_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Endpoint Url"
+  },
+  {
+   "fieldname": "wallbox_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Wallbox Settings"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "evse_control_section",
+   "fieldtype": "Section Break",
+   "label": "EVSE Control"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-05-12 12:58:24.768187",
+ "modified_by": "Administrator",
+ "module": "Its Charging",
+ "name": "Wallbox",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

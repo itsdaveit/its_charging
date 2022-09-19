@@ -100,10 +100,13 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"its_charging.tasks.all"
-# 	],
+scheduler_events = {
+	"cron": {
+			"0/5 * * * *": [
+				"its_charging.hooked.fetch_data"
+			]}
+
+}
 # 	"daily": [
 # 		"its_charging.tasks.daily"
 # 	],

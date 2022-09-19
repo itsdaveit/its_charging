@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestChargingProcess(unittest.TestCase):
+class TestItsChargingSettings(unittest.TestCase):
 	pass

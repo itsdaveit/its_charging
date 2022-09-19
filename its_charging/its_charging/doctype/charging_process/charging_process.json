@@ -1,68 +1,154 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "LF.####",
- "creation": "2022-05-11 11:15:36.875941",
+ "autoname": "format:CHRGP-{wallbox_mac}-{wb_timestamp}",
+ "creation": "2022-09-18 20:55:11.062020",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "user",
-  "user_id",
-  "date",
+  "read_data_section",
   "duration",
   "energy",
+  "price",
+  "reading",
+  "wb_timestamp",
+  "uid",
+  "username",
+  "references_section",
+  "wallbox",
+  "rfid_tag",
+  "employee",
+  "vehicle",
+  "enriched_data_section",
+  "wallbox_mac",
+  "charging_start",
+  "charging_end",
+  "average_charging_speed",
   "costs",
-  "wallbox_name"
+  "licence_plate"
  ],
  "fields": [
   {
-   "fieldname": "user",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "User"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Datetime",
-   "in_list_view": 1,
-   "label": "Date"
-  },
-  {
    "fieldname": "duration",
-   "fieldtype": "Data",
-   "in_list_view": 1,
+   "fieldtype": "Int",
    "label": "Duration"
   },
   {
-   "fieldname": "energy",
+   "fieldname": "price",
+   "fieldtype": "Int",
+   "label": "Price"
+  },
+  {
+   "fieldname": "reading",
+   "fieldtype": "Float",
+   "label": "Reading"
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  },
+  {
+   "fieldname": "username",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Energy in kWh"
+   "in_standard_filter": 1,
+   "label": "Username"
+  },
+  {
+   "fieldname": "wallbox",
+   "fieldtype": "Link",
+   "label": "Wallbox",
+   "options": "Wallbox"
+  },
+  {
+   "fieldname": "read_data_section",
+   "fieldtype": "Section Break",
+   "label": "Read Data"
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "wb_timestamp",
+   "fieldtype": "Int",
+   "label": "Timestamp"
+  },
+  {
+   "fieldname": "wallbox_mac",
+   "fieldtype": "Data",
+   "label": "Wallbox MAC"
+  },
+  {
+   "fieldname": "enriched_data_section",
+   "fieldtype": "Section Break",
+   "label": "Enriched Data"
+  },
+  {
+   "fieldname": "charging_start",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Charging Start"
+  },
+  {
+   "fieldname": "charging_end",
+   "fieldtype": "Datetime",
+   "label": "Charging End"
   },
   {
    "fieldname": "costs",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Costs"
+  },
+  {
+   "fieldname": "licence_plate",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Costs in \u20ac"
+   "in_standard_filter": 1,
+   "label": "Licence Plate"
   },
   {
-   "fieldname": "user_id",
-   "fieldtype": "Data",
-   "label": "User ID"
+   "fieldname": "energy",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Energy"
   },
   {
-   "fieldname": "wallbox_name",
-   "fieldtype": "Data",
-   "label": "Wallbox Name"
+   "fieldname": "average_charging_speed",
+   "fieldtype": "Float",
+   "label": "Average Charging Speed"
+  },
+  {
+   "fieldname": "rfid_tag",
+   "fieldtype": "Link",
+   "label": "RFID Tag",
+   "options": "RFID Tag"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-05-12 13:04:10.006894",
+ "modified": "2022-09-19 01:57:47.001328",
  "modified_by": "Administrator",
  "module": "Its Charging",
- "name": "Charging process",
+ "name": "Charging Process",
  "owner": "Administrator",
  "permissions": [
   {

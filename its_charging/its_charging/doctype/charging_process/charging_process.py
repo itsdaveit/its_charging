@@ -5,4 +5,5 @@
 from frappe.model.document import Document
 
 class ChargingProcess(Document):
-	pass
+	def autoname(self):
+		self.name = "CHRGP-" + str(self.wallbox_mac) + "-" + str(self.wb_timestamp)

@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CHRGP-{wallbox_mac}-{wb_timestamp}",
  "creation": "2022-09-18 20:55:11.062020",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -145,7 +144,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-19 01:57:47.001328",
+ "modified": "2022-09-19 03:31:15.610934",
  "modified_by": "Administrator",
  "module": "Its Charging",
  "name": "Charging Process",

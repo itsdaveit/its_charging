@@ -9,6 +9,7 @@ from frappe import DuplicateEntryError
 
 
 class Wallbox(Document):
+
 	@frappe.whitelist()
 	def get_log(self):
 		wb = evse_wallbox(self.endpoint_url,"","")

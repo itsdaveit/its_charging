@@ -22,7 +22,7 @@ class Wallbox(Document):
 			#calculate charging_end
 			charging_end = charging_start + timedelta(seconds = entry["duration"] / 1000)
 			#calculate average charging speed
-			average_charging_speed = entry["energy"] / (entry["duration"] / 1000 / 60 / 60)
+			average_charging_speed = entry["energy"] / (entry["duration"] / 1000 / 60 / 60) if entry["duration"] != 0 else 0
 			#get rfid tag for linking
 			rfid_tag = self.insert_rfid(entry["uid"], entry["username"])
 			#Prepare doctype meta data

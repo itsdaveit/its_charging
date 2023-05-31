@@ -15,10 +15,22 @@ class Wallbox(Document):
 		wb = evse_wallbox(self.endpoint_url,"","")
 		log = wb.get_log()
 		for entry in log:
+			print(entry)
+			#skip entrys which are still in progress:
+			if "rEnd" in entry.keys():
+				continue
 			#calculate costs for charging process
 			costs = entry["price"] * entry["energy"] / 100
 			#get start datetime from timestamp
 			charging_start = datetime.fromtimestamp(entry["timestamp"])
+			#validate charging_start, and replace it if its greate then now
+			replaced_charging_start = None
+			if charging_start >= datetime.now():
+				print(charging_start)
+				replaced_charging_start = datetime.now()
+			#validate Duration and set to max int, if larger
+			if entry["duration"] > 2147483647:
+				entry["duration"] = 2147483647
 			#calculate charging_end
 			charging_end = charging_start + timedelta(seconds = entry["duration"] / 1000)
 			#calculate average charging speed
@@ -32,6 +44,7 @@ class Wallbox(Document):
 					"wb_timestamp": entry["timestamp"],
 					"costs": costs,
 					"charging_start": charging_start,
+					"replaced_charging_start": replaced_charging_start,
 					"charging_end": charging_end,
 					"average_charging_speed": average_charging_speed,
 					"rfid_tag": rfid_tag.name,

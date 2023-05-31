@@ -22,10 +22,14 @@
   "enriched_data_section",
   "wallbox_mac",
   "charging_start",
+  "replaced_charging_start",
   "charging_end",
   "average_charging_speed",
   "costs",
-  "licence_plate"
+  "licence_plate",
+  "sales_invoice",
+  "delivery_note",
+  "remarks"
  ],
  "fields": [
   {
@@ -140,11 +144,34 @@
    "fieldtype": "Link",
    "label": "Vehicle",
    "options": "Vehicle"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Link",
+   "label": "Delivery Note",
+   "options": "Delivery Note"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "description": "In case of implausible charging start read, we replace it with the current date.",
+   "fieldname": "replaced_charging_start",
+   "fieldtype": "Datetime",
+   "label": "Replaced Charging Start"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-19 03:31:15.610934",
+ "modified": "2023-05-31 13:18:56.404861",
  "modified_by": "Administrator",
  "module": "Its Charging",
  "name": "Charging Process",

@@ -16,8 +16,8 @@ class Wallbox(Document):
 		log = wb.get_log()
 		for entry in log:
 			print(entry)
-			#skip entrys which are still in progress:
-			if "rEnd" in entry.keys():
+			#skip entrys which are still in progress or with 0 energy:
+			if entry["energy"] == 0:
 				continue
 			#calculate costs for charging process
 			costs = entry["price"] * entry["energy"] / 100

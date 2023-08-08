@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-08 09:02:49.022642",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wallboxes"
+ ],
+ "fields": [
+  {
+   "fieldname": "wallboxes",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "List of Wallboxes ",
+   "options": "Wallbox"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-12 11:28:30.056210",
+ "modified_by": "Administrator",
+ "module": "Its Charging",
+ "name": "Wallbox List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

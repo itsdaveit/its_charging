@@ -50,7 +50,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-19 01:13:57.130069",
+ "modified": "2023-06-12 11:23:39.195189",
  "modified_by": "Administrator",
  "module": "Its Charging",
  "name": "RFID Tag",
@@ -69,6 +69,7 @@
    "write": 1
   }
  ],
+ "search_fields": "username",
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

@@ -40,6 +40,7 @@
   {
    "fieldname": "price",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Price"
   },
   {
@@ -171,7 +172,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-31 13:18:56.404861",
+ "modified": "2023-08-08 09:28:57.005849",
  "modified_by": "Administrator",
  "module": "Its Charging",
  "name": "Charging Process",

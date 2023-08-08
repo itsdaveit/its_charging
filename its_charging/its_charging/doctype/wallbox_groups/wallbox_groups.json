@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-08 09:38:01.781779",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "wallbox_groups"
+ ],
+ "fields": [
+  {
+   "fieldname": "wallbox_groups",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Wallbox Groups",
+   "options": "Wallbox Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-07 10:14:15.049895",
+ "modified_by": "Administrator",
+ "module": "Its Charging",
+ "name": "Wallbox Groups",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

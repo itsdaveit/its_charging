@@ -6,7 +6,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "enable_background_fetch"
+  "enable_background_fetch",
+  "adjust_prices_section",
+  "adjust_prices"
  ],
  "fields": [
   {
@@ -14,12 +16,23 @@
    "fieldname": "enable_background_fetch",
    "fieldtype": "Check",
    "label": "Enable Background Fetch"
+  },
+  {
+   "fieldname": "adjust_prices",
+   "fieldtype": "Button",
+   "label": "Adjust prices by list energy costs",
+   "options": "apply_price_calculation_to_all_processes"
+  },
+  {
+   "fieldname": "adjust_prices_section",
+   "fieldtype": "Section Break",
+   "label": "Adjust Prices"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-09-19 01:35:12.957094",
+ "modified": "2023-08-07 21:38:12.179436",
  "modified_by": "Administrator",
  "module": "Its Charging",
  "name": "Its Charging Settings",
